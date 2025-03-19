@@ -14,19 +14,19 @@ pipeline {
           }
         }
 
-        stage('Build') {
+        stage('Deploy') {
           steps {
             echo 'Deploying app...'
           }
         }
+    }
 
-        post {
-          success {
-            echo 'Pipeline completed successfully!'
-          }
-          failure {
-            echo 'Pipeline failed!'
-          }
-        }
+    post {
+      success {
+        echo 'Pipeline completed successfully!'
+      }
+      failure {
+        echo 'Pipeline failed!'
+      }
     }
 }
